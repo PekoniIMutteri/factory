@@ -1,3 +1,5 @@
+use std::io::Write;
+
 use crate::types::{Vec2, World};
 
 fn _go_to_vec(position: Vec2) {
@@ -21,4 +23,5 @@ pub fn map(world: &World) {
             print!("{}", building.to_char());
         }
     }
+    let _ = std::io::stdout().flush();
 }
